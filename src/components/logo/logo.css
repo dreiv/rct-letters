@@ -1,0 +1,15 @@
+.logo > span:nth-child(1n) {
+	color: #2962ff;
+}
+
+.logo > span:nth-child(2n) {
+	color: #ff6d00;
+}
+
+.logo > span:nth-child(3n) {
+	color: #ffd600;
+}
+
+.logo > span:nth-child(4n) {
+	color: #00c853;
+}
