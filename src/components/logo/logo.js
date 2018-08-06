@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './logo.css'
 
-export const Logo = ({ title }) => (
+export const Logo = ({ text }) => (
 	<h1 className="logo">
-		{[...title].map((letter, idx) => <span key={idx}>{letter}</span>)}
+		{[...text].map((letter, idx) => <span key={idx}>{letter}</span>)}
 	</h1>
 )
 
-Logo.propTypes = { title: PropTypes.string }
+Logo.propTypes = { text: PropTypes.string }
 Logo.defaultProps = {
-	title: 'Letters',
+	text: 'Letters',
 }
