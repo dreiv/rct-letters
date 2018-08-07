@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
-import { Logo } from './components/logo/logo'
+import { Logo } from './components/logo/Logo'
+import CommentBox from './components/comment-box/CommentBox'
 import './App.css'
 
 class App extends Component {
 	render() {
-		return <Logo />
+		return (
+			<React.Fragment>
+				<Logo />
+				<CommentBox />
+			</React.Fragment>
+		)
 	}
 }
 
