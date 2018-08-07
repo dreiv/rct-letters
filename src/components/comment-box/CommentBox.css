@@ -1,5 +1,17 @@
 .comment-box {
+	position: relative;
+
 	display: grid;
 
 	grid-gap: 1rem;
+}
+
+.comment-box::before {
+	position: absolute;
+	top: .5rem;
+	bottom: .5rem;
+
+	content: '';
+
+	border-left: .0625rem solid #ccc;
 }

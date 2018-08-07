@@ -1,3 +1,7 @@
+.logo {
+	text-align: center;
+}
+
 .logo > span:nth-child(1n) {
 	color: #2962ff;
 }

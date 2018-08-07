@@ -12,8 +12,8 @@ const defaultProps = {
 
 export default function CreateComment({ onCreate }) {
 	return (
-		<form onSubmit={onCreate}>
-			<textarea name="comment" />
+		<form className="create-comment" onSubmit={onCreate}>
+			<textarea name="comment" placeholder="Comment here…" />
 			<button type="submit">add comment</button>
 		</form>
 	)
