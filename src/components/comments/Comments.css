@@ -1,0 +1,7 @@
+.comments {
+	display: contents;
+}
+
+.comments .comment {
+	margin-left: 1rem;
+}

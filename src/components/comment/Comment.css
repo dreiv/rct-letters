@@ -4,6 +4,9 @@
 }
 
 .comment .header {
+	display: flex;
+	justify-content: space-between;
+
 	padding: .5rem 1rem;
 
 	border-bottom: .0625rem solid #ccc;

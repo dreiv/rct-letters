@@ -15,7 +15,8 @@ export default function PostComment({ post: { content, user, count } }) {
 		<Comment
 			header={
 				<React.Fragment>
-					{user} {count}
+					<span>{`${user} posted`}</span>
+					<span>{`${count} comments`}</span>
 				</React.Fragment>
 			}
 			content={content}
