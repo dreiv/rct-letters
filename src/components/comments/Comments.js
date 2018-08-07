@@ -13,7 +13,12 @@ const defaultProps = {
 export default function Comments({ comments }) {
 	return (
 		<React.Fragment>
-			{comments.map(comment => <div>{comment.content}</div>)}
+			{comments.map(({ id, user, content }) => (
+				<div key={id} className="comment">
+					<div className="comment__header">{`${user} commented`}</div>
+					{content}
+				</div>
+			))}
 		</React.Fragment>
 	)
 }

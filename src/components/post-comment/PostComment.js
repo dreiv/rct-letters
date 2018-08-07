@@ -1,12 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const propTypes = {}
+const propTypes = {
+	post: PropTypes.object,
+}
 
-const defaultProps = {}
+const defaultProps = {
+	post: null,
+}
 
-export default function PostComment(props) {
-	return <React.Fragment>post comment</React.Fragment>
+export default function PostComment({ post: { content, user, count } }) {
+	return (
+		<div className="post-comment">
+			<div className="header">
+				{user} {count}
+			</div>
+			{content}
+		</div>
+	)
 }
 
 PostComment.propTypes = propTypes
