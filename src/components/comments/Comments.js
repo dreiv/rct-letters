@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Comment from '../comment/Comment'
 import './Comments.css'
 
 const propTypes = {
@@ -14,10 +15,7 @@ export default function Comments({ comments }) {
 	return (
 		<React.Fragment>
 			{comments.map(({ id, user, content }) => (
-				<div key={id} className="comment">
-					<div className="comment__header">{`${user} commented`}</div>
-					{content}
-				</div>
+				<Comment key={id} header={`${user} commented`} content={content} />
 			))}
 		</React.Fragment>
 	)
