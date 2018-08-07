@@ -14,10 +14,16 @@ export default class CommentBoxContainer extends React.Component {
 		this.setState({ data: sampleData })
 	}
 
-	handleCreate = comment => {
+	handleCreate = evt => {
+		evt.preventDefault()
 		const { data } = this.state
-		data.comments.push(comment)
+		const comment = {
+			id: data.comments.length,
+			user: 'I',
+			content: (evt.target.comment || {}).value,
+		}
 
+		data.comments.push(comment)
 		this.setState({ data })
 	}
 

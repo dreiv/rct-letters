@@ -12,10 +12,10 @@ const defaultProps = {
 
 export default function CreateComment({ onCreate }) {
 	return (
-		<div>
-			<input type="text" />
-			<button onClick={onCreate}>create</button>
-		</div>
+		<form onSubmit={onCreate}>
+			<textarea name="comment" />
+			<button type="submit">add comment</button>
+		</form>
 	)
 }
 

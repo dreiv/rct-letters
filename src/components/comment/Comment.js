@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const propTypes = {
-	header: PropTypes.element,
-	content: PropTypes.element,
+	header: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+	content: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 }
 
 const defaultProps = {
