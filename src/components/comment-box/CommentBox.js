@@ -7,18 +7,20 @@ import './CommentBox.css'
 
 const propTypes = {
 	data: PropTypes.object,
+	onCreate: PropTypes.func,
 }
 
 const defaultProps = {
 	data: null,
+	onCreate: () => {},
 }
 
-export default function CommentBox({ data: { comments, ...post } }) {
+export default function CommentBox({ data: { comments, ...post }, onCreate }) {
 	return (
 		<div className="comment-box">
 			<PostComment post={{ ...post, count: comments.length }} />
 			<Comments comments={comments} />
-			<CreateComment />
+			<CreateComment onCreate={onCreate} />
 		</div>
 	)
 }
