@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './Comment.css'
 
 const propTypes = {
 	header: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
@@ -15,7 +16,7 @@ export default function Comment({ header, content }) {
 	return (
 		<div className="comment">
 			<div className="header">{header}</div>
-			{content}
+			<div className="content">{content}</div>
 		</div>
 	)
 }
