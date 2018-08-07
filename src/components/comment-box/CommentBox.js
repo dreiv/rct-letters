@@ -5,15 +5,21 @@ import Comments from '../comment/Comments'
 import CreateComment from '../create-comment/CreateComment'
 import './CommentBox.css'
 
-const propTypes = {}
+const propTypes = {
+	data: PropTypes.object,
+}
 
-const defaultProps = {}
+const defaultProps = {
+	data: null,
+}
 
-export default function CommentBox(props) {
+export default function CommentBox({ data }) {
+	const { comments } = data
+
 	return (
 		<div className="comment-box">
 			<PostComment />
-			<Comments />
+			<Comments comments={comments} />
 			<CreateComment />
 		</div>
 	)
